@@ -79,30 +79,7 @@ document.querySelectorAll('.animate-text, .skill-progress, .project-card, .servi
     observer.observe(el);
 });
 
-// Form Submission
-const contactForm = document.querySelector('.contact-form');
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = new FormData(contactForm);
-    const formValues = Object.fromEntries(formData.entries());
-    
-    // Add your form submission logic here
-    console.log('Form submitted:', formValues);
-    
-    // Show success message
-    const successMessage = document.createElement('div');
-    successMessage.className = 'success-message';
-    successMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-    contactForm.appendChild(successMessage);
-    
-    // Reset form
-    contactForm.reset();
-    
-    // Remove success message after 3 seconds
-    setTimeout(() => {
-        successMessage.remove();
-    }, 3000);
-});
+
 
 // Dark Mode Toggle
 const darkModeToggle = document.createElement('button');
